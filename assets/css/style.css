@@ -1,0 +1,97 @@
+.container {
+    background-color: rgb(165, 198, 193);
+    background-size: 100%;
+    height: 700px;
+    
+}
+
+#name {
+    margin-left: 5px;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(196, 113, 13);
+    color: whitesmoke;
+    text-align: center;
+}
+
+#about {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 380px;
+    height: 280px;
+    background-color: bisque;
+    color: green;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.board {
+    width: 300px;
+    height: 110px;
+    display: flex
+}
+#random-number {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    color: black;
+    padding-left: 10px;
+    padding-top: 5px;
+    flex: 70%;
+}
+#score-board {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(59, 215, 212);
+    color: black;
+    padding-left: 10px;
+    padding-top: 5px;
+    flex: 30%;
+}
+.crystals-board {
+    background-color: beige;
+    width: 350px;
+    height: 80px;
+    margin-top: 15px;
+    margin-left: 5px;
+    display: flex;
+}
+#red-crystal {
+    background-color: aquamarine;
+    flex: 25%;
+    margin-right: 5px;
+}
+#blue-crystal {
+    background-color: aquamarine;
+    flex: 25%;
+    margin-right: 5px;
+}
+#yellow-crystal {
+    background-color: aquamarine;
+    flex: 25%;
+    margin-right: 5px;
+}
+#green-crystal {
+    flex: 25%;
+    background-color: aquamarine;
+}
+#text {
+    width: 145px;
+    height: 25px;
+    background-color: rgb(63, 150, 152);
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#your-guess {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 180px;
+    height: 80px;
+    background-color: rgb(63, 150, 152);
+    color: black;
+    padding-left: 10px;
+    padding-top: 5px;
+}
