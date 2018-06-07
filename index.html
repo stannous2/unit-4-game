@@ -1,108 +1,134 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>
-        Crystal Collector Game
-    </title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/reset.css" /> -->
-    <link href="../unit-4-game/assets/css/style.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="../unit-4-game/assets/javascript/game.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-    </meta>
-    </meta>
-</head>
-
-<body>
-    <div class="container">
-        <div id="name">
-            <h2 class="text">
-                Crystals Collector!
-            </h2>
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+            <title>
+                Crystal Collector Game
+            </title>
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+                <!-- <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/reset.css" /> -->
+                <link href="../unit-4-game/assets/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+                <script src="../unit-4-game/assets/javascript/game.js">
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                </script>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <div class="container">
+            <div id="name">
+                <h2 class="text">
+                    Crystals Collector!
+                </h2>
+            </div>
+            <div id="about">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nemo cupiditate excepturi repellendus, cumque nam aliquam
+                </p>
+                <p>
+                    Velit minima minus asperiores ducimus quo aliquid ad laudantium iusto, beatae distinctio voluptate quaerat?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nemo cupiditate excepturi repellendus, cumque nam aliquam
+                </p>
+            </div>
+            <section class="board">
+                <div id="random-number">
+                </div>
+                <div id="score-board">
+                    <li>
+                        status
+                    </li>
+                    <li>
+                        Wins:
+                    </li>
+                    <li>
+                        Losses:
+                    </li>
+                </div>
+            </section>
+            <div class="crystals-board">
+                <div id="red">
+                    <button class="btn btn-primary number" id="red-crystal" value="">
+                        Red
+                    </button>
+                </div>
+                <div id="blue">
+                    <button class="btn btn-primary number" id="blue-crystal" value="">
+                        blue
+                    </button>
+                </div>
+                <div id="yellow">
+                    <button class="btn btn-primary number" id="yellow-crystal" value="">
+                        yellow
+                    </button>
+                </div>
+                <div id="green">
+                    <button class="btn btn-primary number" id="green-crystal" value="">
+                        green
+                    </button>
+                </div>
+            </div>
+            <div id="text">
+                Your total score is:
+            </div>
+            <div id="your-guess">
+            </div>
         </div>
-        <div id="about">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nemo cupiditate excepturi repellendus, cumque nam aliquam
-            </p>
-            <p>
-                Velit minima minus asperiores ducimus quo aliquid ad laudantium iusto, beatae distinctio voluptate quaerat?
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nemo cupiditate excepturi repellendus, cumque nam aliquam
-            </p>
-        </div>
-        <section class="board">
-            <div id="random-number">
-            </div>
-            <div id="score-board">
-                <li>
-                    status
-                </li>
-                <li>
-                    Wins:
-                </li>
-                <li>
-                    Losses:
-                </li>
-            </div>
-        </section>
-        <div class="crystals-board">
-            <div id="red-crystal">
-                <button id="red-crystal" class="btn btn-primary number" value="">Red</button>
-            </div>
-            <div id="blue-crystal">
-                <button id="blue-crystal" class="btn btn-primary number" value="">blue</button>
-            </div>
-            <div id="yellow-crystal">
-                <button id="yellow-crystal" class="btn btn-primary number" value="">yellow</button>
-            </div>
-            <div id="green-crystal">
-                <button id="green-crystal" class="btn btn-primary number" value="">green</button>
-            </div>
-        </div>
-
-        <div id="text">
-            Your total score is:
-        </div>
-        <div id="your-guess">
-        </div>
-    </div>
-
-    <script>
+        <script>
         let randNumberHtml = $('#random-number');
+        
 
         let randomNumber = 0;
         let gemNumbers = ['gem1', 'gem2', 'gem3', 'gem4']
-        let buttons = ['button1', 'button2', 'button3', 'button4']
+        let buttons = []
         let sum = 0;
+        let gameEnd = true;
 
         $(document).ready(function () {
             startGame();
-            for (i = 0; i < buttons.lenght; i++) {
-                console.log("button" + i + "  " + buttons[i]);
-            }
-            console.log('this is a test....' + gemNumbers[0])
             
-            $('#red-crystal').attr('value') = gemNumbers[0];
+            
+            let retrievedValue = 0;
 
-            $('#blue-crystal').attr('value') = gemNumbers[1];
-            $('#yellow-crystal').attr('value') = gemNumbers[2];
-            $('#green-crystal').attr('value') = gemNumbers[3];
+            $('#red-crystal').attr('value', buttons[0]);
+            retrievedValue = $('#red-crystal').attr('value');
+            console.log('Red Value: ' + retrievedValue)
+
+            $('#blue-crystal').attr('value', buttons[1]);
+            retrievedValue = $('#blue-crystal').attr('value');
+            console.log('blue Value: ' + retrievedValue)
+
+            $('#yellow-crystal').attr('value', buttons[2]);
+            retrievedValue = $('#yellow-crystal').attr('value');
+            console.log('yellow Value: ' + retrievedValue)
+
+            $('#green-crystal').attr('value', buttons[3]);
+            retrievedValue = $('#green-crystal').attr('value');
+            console.log('green Value: ' + retrievedValue)
         })
         
-        $('.number').on('click', function(){
-            sum += $(this).attr('value');
+
+        $('button').on('click', function(){
+            sum += parseInt($(this).attr('value'));
             console.log('The total is: ' + sum);
             $('#your-guess').html(sum);
-        })
-    </script>
+            
+            
+            if(sum === randomNumber){
+                
+                console.log('You win!!!')
+                gameEnd = true;
+            }
+            else if (sum > randomNumber){
+                console.log('you lose!!!!')
+                gameEnd = true;
+            }
+        
+            })
 
-
-</body>
-
+        </script>
+    </body>
 </html>

@@ -10,13 +10,18 @@ function generateRandNumber() {
 function generateGemRandNumber() {
 	for(i = 1; i < 5; i++){
         gemNumbers[i] = Math.floor(Math.random() * 12) + 1;
-        buttons[i] = gemNumbers[i];
+        buttons.push(gemNumbers[i])
 
         console.log('gem' + i + ' ' + gemNumbers[i]);
-        console.log('button' + i + ' ' + buttons[i])
+        
 	}
     
 }
+function generateGemRandNumber1() {
+	
+        gemNumber = Math.floor(Math.random() * 12) + 1;
+        return gemNumber;
+	}
 
 function appendNumber2Total(gemNum) {
     
@@ -39,7 +44,7 @@ function startGame() {
         console.log("you just clicked to start the game...");
         // debugger;
         generateGemRandNumber();
-        
+                
         displayRandNumber(randNumberHtml);
     
 }
