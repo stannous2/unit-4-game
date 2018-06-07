@@ -9,17 +9,16 @@ function generateRandNumber() {
 //this function generates a random number for gem
 function generateGemRandNumber() {
 	for(i = 1; i < 5; i++){
-		gemNumbers[i] = Math.floor(Math.random() * 12) + 1;
-    	console.log('gem' + i + ' ' + gemNumbers[i]);
+        gemNumbers[i] = Math.floor(Math.random() * 12) + 1;
+        buttons[i] = gemNumbers[i];
 
-    	// this['gemNumber' + i] = gemNumbers[i];
-    	// console.log('gemNumber' + i + "____" + this['gemNumber' + i])
-
-    	// console.log ('gemNumber1___: ' + gem1);
-    	// console.log ('gemNumber2___: ' + gemNumber2);
-    	// console.log ('gemNumber3___: ' + gemNumber3);
-    	// console.log ('gemNumber4___: ' + gemNumber4);
+        console.log('gem' + i + ' ' + gemNumbers[i]);
+        console.log('button' + i + ' ' + buttons[i])
 	}
+    
+}
+
+function appendNumber2Total(gemNum) {
     
 }
 
