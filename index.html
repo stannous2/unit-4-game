@@ -9,10 +9,8 @@
             <meta content="width=device-width, initial-scale=1" name="viewport">
                 <!-- <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/reset.css" /> -->
                 <link href="../unit-4-game/assets/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
-                <script src="../unit-4-game/assets/javascript/game.js">
-                </script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-                </script>
+                <!-- <script src="../unit-4-game/assets/javascript/game.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
             </meta>
         </meta>
     </head>
@@ -35,85 +33,52 @@
                 </p>
             </div>
             <section class="board">
-                <div id="random-number"></div>
+                <div id="random-number">
+                </div>
                 <div id="status-board">
-                    <p id="status">status</p>
+                    <p id="status">
+                        status
+                    </p>
                     <br>
-                    <p id="wins">Wins:</p>
-                    <br>
-                    <p id="losses">Losses:</p>                     
+                        <p id="wins">
+                            Wins:
+                        </p>
+                        <br>
+                            <p id="losses">
+                                Losses:
+                            </p>
+                        </br>
+                    </br>
                 </div>
             </section>
-
             <div class="crystals-board">
                 <div id="red">
-                    <button class="btn btn-primary number" id="red-crystal" value=""></button>
+                    <button class="btn btn-primary number" id="red-crystal" value="">
+                    </button>
                 </div>
                 <div id="blue">
-                    <button class="btn btn-primary number" id="blue-crystal" value=""></button>
+                    <button class="btn btn-primary number" id="blue-crystal" value="">
+                    </button>
                 </div>
                 <div id="yellow">
-                    <button class="btn btn-primary number" id="yellow-crystal" value=""></button>
+                    <button class="btn btn-primary number" id="yellow-crystal" value="">
+                    </button>
                 </div>
                 <div id="green">
-                    <button class="btn btn-primary number" id="green-crystal" value=""></button>
+                    <button class="btn btn-primary number" id="green-crystal" value="">
+                    </button>
                 </div>
             </div>
-
             <div id="text">
                 Your total score is:
             </div>
             <div id="your-guess">
             </div>
         </div>
-        <script>
-        let randNumberHtml = $('#random-number');
-        let randomNumber = 0;
-        let buttons = []
-        let sum = 0;
-        let wins = 0;
-        let losses = 0;
-
-        $(document).ready(function () {
-            startGame();
-
-
-            let retrievedValue = 0;
-
-            $('#red-crystal').attr('value', buttons[0]);
-            retrievedValue = $('#red-crystal').attr('value');
-
-            $('#blue-crystal').attr('value', buttons[1]);
-            retrievedValue = $('#blue-crystal').attr('value');
-
-            $('#yellow-crystal').attr('value', buttons[2]);
-            retrievedValue = $('#yellow-crystal').attr('value');
-
-            $('#green-crystal').attr('value', buttons[3]);
-            retrievedValue = $('#green-crystal').attr('value');
-        })
-
-
-        $('button').on('click', function () {
-            sum += parseInt($(this).attr('value'));
-            console.log('The total is: ' + sum);
-            $('#your-guess').html(sum);
-
-
-            if (sum === randomNumber) {
-                wins++;
-                console.log('You win!!!')
-                $('#wins').text('Wins: ' + wins)
-                $('#status').text('Status: Winer')
-                resetGame();
-            } else if (sum > randomNumber) {
-                losses++;
-                console.log('you lose!!!!')
-                $('#losses').text('Losses: ' + losses);
-                $('#status').text('Status: Loser')
-                resetGame();
-            }
-        })
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+        <script src="../unit-4-game/assets/javascript/game.js" type="text/javascript"></script>
+        
         </script>
     </body>
 </html>
