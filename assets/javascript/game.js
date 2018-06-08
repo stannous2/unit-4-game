@@ -50,13 +50,8 @@ function startGame() {
 }
 
 
-// function startGame() {
-//     document.addEventListener("click", () => {
-//         console.log("you just clicked to start the game...");
-
-//         //generateRandNumber();
-//         generateGemRandNumber();
-        
-//         displayRandNumber(randNumberHtml);
-//     });
-// }
+function resetGame() {
+    sum = 0;
+    buttons.length = 0
+    
+}
