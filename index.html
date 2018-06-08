@@ -41,10 +41,10 @@
                     <li>
                         status
                     </li>
-                    <li>
+                    <li id = "win">
                         Wins:
                     </li>
-                    <li>
+                    <li id = "losses">
                         Losses:
                     </li>
                 </div>
@@ -86,6 +86,8 @@
         let buttons = []
         let sum = 0;
         let gameEnd = true;
+        let win = 0;
+        let losses = 0;
 
         $(document).ready(function () {
             startGame();
@@ -116,16 +118,21 @@
             console.log('The total is: ' + sum);
             $('#your-guess').html(sum);
             
-            
+
             if(sum === randomNumber){
-                
+                win++;
+                console.log('win number: ' + win)
                 console.log('You win!!!')
-                gameEnd = true;
+                $('win').text(win);
             }
             else if (sum > randomNumber){
+                losses++;
+                console.log('losses count: ' + losses)
+                $('losses').text(losses);
                 console.log('you lose!!!!')
-                gameEnd = true;
+               
             }
+        
         
             })
 
