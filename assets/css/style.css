@@ -2,9 +2,7 @@
     background-color: rgb(165, 198, 193);
     background-size: 100%;
     height: 700px;
-    
 }
-
 #name {
     margin-left: 5px;
     width: 250px;
@@ -29,7 +27,7 @@
     padding-top: 5px;
 }
 .board {
-    width: 300px;
+    width: 330px;
     height: 110px;
     display: flex
 }
@@ -47,7 +45,7 @@
     line-height: -moz-block-height;
     font-size: 35px;
 }
-#score-board {
+#status-board {
     margin-top: 10px;
     margin-left: 5px;
     width: 100px;
@@ -56,7 +54,10 @@
     color: black;
     padding-left: 10px;
     padding-top: 5px;
-    flex: 30%;
+    flex: 40%;
+}
+p {
+    margin: auto;
 }
 .crystals-board {
     background-color: beige;
@@ -68,22 +69,31 @@
 }
 #red-crystal {
     background-color: aquamarine;
+    background: url("../images/red-gem.png");
+    background-size: 95%;
     flex: 25%;
     margin-right: 5px;
+
 }
 #blue-crystal {
     background-color: aquamarine;
+    background: url("../images/blue-gem.png");
+    background-size: 100%;
     flex: 25%;
     margin-right: 5px;
 }
 #yellow-crystal {
     background-color: aquamarine;
+    background: url("../images/yellow-gem.jpg");
+    background-size: 100%;
     flex: 25%;
     margin-right: 5px;
 }
 #green-crystal {
     flex: 25%;
     background-color: aquamarine;
+    background: url("../images/green-gem.jpg");
+    background-size: 100%;
 }
 #text {
     width: 145px;
@@ -101,4 +111,12 @@
     color: black;
     padding-left: 10px;
     padding-top: 5px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+}
+.btn {
+    width: 84px;
+    height: 80px;
+    
 }
