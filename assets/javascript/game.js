@@ -44,18 +44,27 @@ function resetGame() {
     buttons.length = 0
     generateGemRandNumber();
     displayRandNumber(randNumberHtml);
+    setRandomNumberToGem();
 }
 
 function setRandomNumberToGem() {
     let retrievedValue = 0;
     $('#red-crystal').attr('value', buttons[0]);
     retrievedValue = $('#red-crystal').attr('value');
+    console.log('red-gem is --- ' + buttons[0])
+
     $('#blue-crystal').attr('value', buttons[1]);
     retrievedValue = $('#blue-crystal').attr('value');
+    console.log('blue-gem is --- ' + buttons[1])
+    
     $('#yellow-crystal').attr('value', buttons[2]);
     retrievedValue = $('#yellow-crystal').attr('value');
+    console.log('yellow-gem is --- ' + buttons[2])
+    
     $('#green-crystal').attr('value', buttons[3]);
     retrievedValue = $('#green-crystal').attr('value');
+    console.log('green-gem is --- ' + buttons[3])
+    
 }
 
 
